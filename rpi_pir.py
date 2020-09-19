@@ -8,6 +8,7 @@ class PIR:
     action = None
     action_args = None
     time_lapse = None
+    stop = False
 
     def __init__(self, gpio_pin, time_lapse, action, action_args=None):
         GPIO.setup(gpio_pin, GPIO.IN)
@@ -15,7 +16,7 @@ class PIR:
         self.action = action
         self.action_args = action_args
         self.time_lapse = time_lapse
-        self.stop = False
+
 
     def __pir_process__(self, stop=False):
         while not self.stop:
@@ -34,6 +35,7 @@ class PIR:
                     sleep(self.time_lapse)
 
     def start(self):
+        self.stop = True
         self.__pir_process__(False)
 
     def stop_process(self):

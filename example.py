@@ -15,4 +15,7 @@ sensor = PIR(gpio_pin=23, time_lapse=1, action=dummy_function, action_args=args)
 # Monitoring for just one action
 sensor.one_action()
 # Continuous monitoring
-sensor.start()
+# sensor.start()
+# Stop continuous monitoring
+# sensor.stop()
+
