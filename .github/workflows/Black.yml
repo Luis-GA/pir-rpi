@@ -28,7 +28,7 @@ jobs:
       run: |
         echo "startDate=$(date +%s)" >> $GITHUB_ENV
         echo "black_version=$(black --version | head -n 1 | awk '{print $2}')"  >> $GITHUB_ENV
-        if [ $(black --check .) -eq 0 ]; then
+        if $(black --check .); then
             result=true
         else
             result=false
