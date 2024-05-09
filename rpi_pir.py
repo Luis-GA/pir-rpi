@@ -17,7 +17,6 @@ class PIR:
         self.action_args = action_args
         self.time_lapse = time_lapse
 
-
     def __pir_process__(self, stop=False):
         while not self.stop:
             if GPIO.input(self.gpio_pin):
@@ -43,8 +42,3 @@ class PIR:
 
     def one_action(self):
         self.__pir_process__(True)
-
-
-
-
-

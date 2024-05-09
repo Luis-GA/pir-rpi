@@ -7,7 +7,7 @@ def dummy_function(name):
 
 
 # Arguments for the action
-args = ('Juan',)
+args = ("Juan",)
 
 # Instantiate the class
 sensor = PIR(gpio_pin=23, time_lapse=1, action=dummy_function, action_args=args)
@@ -18,4 +18,3 @@ sensor.one_action()
 # sensor.start()
 # Stop continuous monitoring
 # sensor.stop()
-
